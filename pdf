@@ -1,0 +1,7 @@
+1   #!/bin/bash
+  1
+  2 read -p "URL: " url
+  3 downloadfolder="/home/abramnaranjo/Downloads/html/"
+  4 filename=$(echo $url | sed 's|.*/||; s/[.].*$//')
+  5 pdfext=".pdf"
+  6 wkhtmltopdf "$url" "${downloadfolder}${filename}${pdfext}"
